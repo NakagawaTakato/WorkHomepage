@@ -1,0 +1,75 @@
+.tokushoho-page {
+  max-width: 800px;
+}
+
+.tokushoho-page .page-title {
+  font-size: 30px;
+}
+
+.tokushoho__section {
+  margin-top: 48px;
+  color: var(--navy);
+}
+
+.tokushoho__section h2 {
+  margin-bottom: 14px;
+  font-size: 20px;
+}
+
+.tokushoho__section ul {
+  padding-left: 1.3em;
+}
+
+.tokushoho__section li {
+  margin-top: 8px;
+}
+
+.info {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--white);
+}
+
+.info__row {
+  display: flex;
+  padding: 16px 22px;
+  font-size: 15px;
+}
+
+.info__row + .info__row {
+  border-top: 1px solid var(--line);
+}
+
+.info__row dt {
+  flex: none;
+  width: 196px;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.todo {
+  display: inline-block;
+  padding: 0 8px;
+  border: 1px dashed #d99a00;
+  border-radius: 6px;
+  background: #fff0b8;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tokushoho__back {
+  margin-top: 48px;
+}
+
+@media screen and (max-width: 600px) {
+  .info__row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .info__row dt {
+    width: auto;
+  }
+}

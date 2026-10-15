@@ -1,0 +1,60 @@
+.line-page {
+  max-width: 600px;
+}
+
+.line-page__brand {
+  color: var(--green);
+}
+
+.line-page .page-lead {
+  font-size: 17px;
+}
+
+.qr {
+  margin: 32px 0 28px;
+  padding: 36px 24px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--white);
+  text-align: center;
+}
+
+.qr__title {
+  margin-bottom: 12px;
+  font-size: 23px;
+}
+
+.qr__text {
+  max-width: 320px;
+  margin: 0 auto 16px;
+  color: var(--muted);
+}
+
+.qr__frame {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--white);
+}
+
+.qr__image {
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+.qr__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  border: 2px dashed var(--blue);
+  border-radius: 10px;
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 700;
+}
