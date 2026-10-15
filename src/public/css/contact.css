@@ -1,0 +1,167 @@
+.contact-page {
+  max-width: 680px;
+}
+
+.alert {
+  margin-top: 24px;
+  padding: 16px 20px;
+  border: 2px solid;
+  border-radius: 14px;
+  font-weight: 700;
+}
+
+.alert--success {
+  border-color: #1f9d55;
+  background: #e3f6ea;
+  color: #136c39;
+}
+
+.alert--error {
+  border-color: var(--red);
+  background: #fbe9e7;
+  color: var(--red);
+}
+
+.form,
+.privacy {
+  margin-top: 24px;
+  padding: 32px 24px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--white);
+}
+
+.form__group {
+  margin-bottom: 36px;
+}
+
+.form__label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 4px;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.form__required,
+.form__optional {
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--red);
+  color: var(--white);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.form__optional {
+  background: var(--blue-pale);
+  color: var(--blue);
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  height: 56px;
+  padding: 0 16px;
+  border: 2px solid #c9d6ea;
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--navy);
+  font-size: 16px;
+}
+
+.form__input:focus,
+.form__choice:focus-within,
+.form__agree:focus-within {
+  border-color: var(--blue);
+  outline: none;
+}
+
+.form__choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.form__choice,
+.form__agree {
+  border: 2px solid #c9d6ea;
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--navy);
+}
+
+.form__choice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.form__choice input,
+.form__agree-check input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--blue);
+}
+
+.form__agree {
+  padding: 16px 18px;
+}
+
+.form__agree-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.form__help {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.form__error {
+  margin-top: 6px;
+  color: var(--red);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form__submit {
+  margin-top: -14px;
+  padding: 12px 34px;
+  font-size: 17px;
+}
+
+.privacy {
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: var(--navy);
+}
+
+.privacy h2 {
+  margin-bottom: 10px;
+  font-size: 23px;
+}
+
+.privacy h3 {
+  margin: 18px 0 6px;
+  color: var(--blue);
+  font-size: 16px;
+}
+
+.privacy ul {
+  padding-left: 1.3em;
+}
+
+.privacy__date {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 13px;
+}

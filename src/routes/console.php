@@ -17,3 +17,19 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
+
+Artisan::command('admin:create {email} {--name=管理者} {--password=}', function ($email) {
+    $password = $this->option('password') ?: $this->secret('パスワード(8文字以上)');
+
+    if (mb_strlen((string) $password) < 8) {
+        $this->error('パスワードは8文字以上にしてください');
+        return 1;
+    }
+
+    \App\Models\User::updateOrCreate(
+        ['email' => $email],
+        ['name' => $this->option('name'), 'password' => \Illuminate\Support\Facades\Hash::make($password)]
+    );
+
+    $this->info("管理者アカウントを保存しました: {$email}");
+})->purpose('管理画面にログインする管理者アカウントを作成・パスワード変更します');

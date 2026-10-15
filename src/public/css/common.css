@@ -1,0 +1,178 @@
+:root {
+  --blue: #1558c0;
+  --blue-dark: #0f469c;
+  --blue-light: #e3edfb;
+  --blue-pale: #dbe7f8;
+  --green: #06a64a;
+  --green-dark: #058a3d;
+  --red: #b3261e;
+  --navy: #14213d;
+  --text: #33415c;
+  --muted: #5a6b85;
+  --bg: #f5f8fc;
+  --line: #d9e2ef;
+  --white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+dl,
+dd {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--navy);
+  line-height: 1.4;
+}
+
+a {
+  color: var(--blue);
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+.icon {
+  display: block;
+}
+
+/* ロゴ */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--navy);
+}
+
+.logo__mark {
+  flex: none;
+}
+
+.logo__name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+
+.logo__name--accent {
+  color: var(--blue);
+}
+
+.logo__sub {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.logo--inline .logo__mark {
+  width: 32px;
+  height: 32px;
+}
+
+.logo--inline .logo__name {
+  font-size: 22px;
+}
+
+/* 下層ページ共通 */
+.sub-page {
+  margin: 0 auto;
+  padding: 28px 20px 80px;
+}
+
+.sub-header {
+  margin-bottom: 44px;
+}
+
+.page-title {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.page-lead {
+  color: var(--muted);
+}
+
+/* ボタン */
+.button {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 2px solid var(--blue);
+  border-radius: 999px;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.button:hover {
+  background: var(--blue-dark);
+  border-color: var(--blue-dark);
+}
+
+.button--outline {
+  background: var(--white);
+  color: var(--blue);
+}
+
+.button--outline:hover {
+  background: var(--blue-light);
+  border-color: var(--blue);
+}
+
+.button--green {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.button--green:hover {
+  background: var(--green-dark);
+  border-color: var(--green-dark);
+}
+
+.button:disabled {
+  background: #c5cfe0;
+  border-color: #c5cfe0;
+  color: #6f7c93;
+  cursor: not-allowed;
+}
+
+.text-link {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .page-title {
+    font-size: 26px;
+  }
+
+  .logo__name {
+    font-size: 22px;
+  }
+}
