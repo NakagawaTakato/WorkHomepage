@@ -29,6 +29,8 @@ return [
         'cancel_deadline' => null,
         'cancel_policy' => "着手前のキャンセル:お支払い済みの金額を全額お返しします。\n着手後のキャンセル:作業の進み具合に応じて、制作済みの分の費用をいただき、残りをお返しします。\n納品後の内容の不具合:お見積書の内容と異なる場合は、無償で修正します。",
         'cancel_policy_confirmed' => null,
+        // お問い合わせフォームの送信内容を受け取るメールアドレス(初期値は .env の CONTACT_MAIL_TO)
+        'contact_mail_to' => env('CONTACT_MAIL_TO'),
     ],
 
     'business_hours' => '平日 9時〜17時',

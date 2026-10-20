@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Mail\Transport\MicrosoftGraphTransport;
+use App\Services\MicrosoftOAuth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +26,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Mail::extend('microsoft-graph', function () {
+            return new MicrosoftGraphTransport($this->app->make(MicrosoftOAuth::class));
+        });
     }
 }

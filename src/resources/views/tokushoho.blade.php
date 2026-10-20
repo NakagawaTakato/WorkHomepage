@@ -51,7 +51,7 @@
         </div>
         <div class="info__row">
           <dt>販売価格</dt>
-          <dd>ご相談内容に応じて、お見積書に記載します(料金の目安は<a href="{{ route('home') }}#price">トップページ</a>)。<br />保守プランは月額5,500円〜(税込)。</dd>
+          <dd>ご相談内容に応じて、お見積書に記載します(料金の目安は<a href="{{ route('home') }}#price">トップページ</a>)。<br />保守プランは月額5,000円〜(税込)。</dd>
         </div>
         <div class="info__row">
           <dt>代金以外の費用</dt>

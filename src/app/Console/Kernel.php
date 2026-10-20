@@ -15,7 +15,11 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        // Outlookの認証は長く使わないと切れるため、毎週更新しておく
+        $schedule->command('mail:outlook-refresh')->weekly()
+            ->when(function () {
+                return config('mail.default') === 'microsoft-graph';
+            });
     }
 
     /**

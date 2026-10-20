@@ -62,6 +62,11 @@ return [
             'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -t -i'),
         ],
 
+        // Outlook(Microsoft Graph API)で送る。初回は「php artisan mail:outlook-login」でサインインする
+        'microsoft-graph' => [
+            'transport' => 'microsoft-graph',
+        ],
+
         'log' => [
             'transport' => 'log',
             'channel' => env('MAIL_LOG_CHANNEL'),
