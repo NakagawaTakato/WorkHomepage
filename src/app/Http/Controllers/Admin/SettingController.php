@@ -28,6 +28,7 @@ class SettingController extends Controller
         'copyright',
         'cancel_deadline',
         'cancel_policy',
+        'contact_mail_to',
     ];
 
     public function edit()

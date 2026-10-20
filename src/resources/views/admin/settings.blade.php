@@ -65,6 +65,14 @@
     </label>
   </section>
 
+  <section class="admin-card">
+    <div class="admin-card__head">
+      <h2>お問い合わせフォーム</h2>
+      <a href="{{ route('contact') }}" target="_blank" rel="noopener">公開ページを見る</a>
+    </div>
+    @include('admin.partials.text_field', ['key' => 'contact_mail_to', 'label' => 'お問い合わせの送信先メールアドレス', 'type' => 'email', 'placeholder' => '例:info@example.com', 'help' => '「お問い合わせ送信」が押されると、入力内容がこのアドレスにメールで届きます。空欄にするとメールは送られません(お問い合わせの内容はデータベースには保存されます)。'])
+  </section>
+
   <div class="admin-actions">
     <button class="button" type="submit">保存する</button>
   </div>

@@ -153,7 +153,7 @@
           <div class="icon-circle timeline__icon">@include('partials.icon', ['name' => 'graduation'])</div>
           <span class="timeline__period">4年間</span>
           <h3>IT専門学校</h3>
-          <p><span class="timeline__tag">1年目</span>パソコンの基礎から学びました。</p>
+          <p><span class="timeline__tag">1年目</span>パソコンの基礎から学び、Excel、Word、PowerPointの使い方を学びました。</p>
           <p><span class="timeline__tag">2年目</span>組込みシステム(C言語)を学び、制作物としてロボットを作成。金賞を受賞しました。</p>
           <p><span class="timeline__tag">3年目</span>ゲーム制作を学び始め、C++ではクラスの仕組みまで深く学習。C言語でインベーダーゲーム、C++で迷路ゲームを制作しました。</p>
           <p><span class="timeline__tag">4年目</span>卒業制作として、UnityのC#でARを使った格闘ゲーム(ストリートファイター風)を制作。カプコン賞を受賞しました。</p>
@@ -174,7 +174,7 @@
           <div class="icon-circle timeline__icon">@include('partials.icon', ['name' => 'building'])</div>
           <span class="timeline__period">1年間</span>
           <h3>IT開発会社</h3>
-          <p><span class="timeline__tag">前半6か月</span>Pythonを使ってExcelを扱うプログラムを作成し、フローチャートを使った設計も経験しました。</p>
+          <p><span class="timeline__tag">前半6か月</span>Pythonを使ってExcelを扱うプログラムを作成し、Excel操作の難しいところまで携わりました。フローチャートを使った設計も経験しました。</p>
           <p><span class="timeline__tag">後半6か月</span>フロントエンドはReactを経験し、バックエンドはFastAPIで開発しました。あわせて、詳細設計書の修正と作成も経験しました。</p>
         </li>
         <li class="timeline__item timeline__item--now">
@@ -266,7 +266,7 @@
         </table>
       </div>
       <p class="price__note">上の金額は目安です。ページ数や内容をうかがってから、お見積りをお出しします。</p>
-      <p class="price__note">公開後のサーバー管理や修正をおまかせいただく場合は、月額5,500円〜の保守プランをご用意しています(ご希望の方のみ)。</p>
+      <p class="price__note">公開後のサーバー管理や修正をおまかせいただく場合は、月額5,000円〜(税込)の保守プランをご用意しています(ご希望の方のみ)。</p>
     </section>
 
     <section class="section" id="trust">
@@ -376,7 +376,7 @@
         </details>
         <details>
           <summary>公開後の修正はお願いできますか?</summary>
-          <p>はい。公開後のサーバー管理や修正をおまかせいただける、月額5,500円〜の保守プランをご用意しています(ご希望の方のみ)。</p>
+          <p>はい。公開後のサーバー管理や修正をおまかせいただける、月額5,000円〜(税込)の保守プランをご用意しています(ご希望の方のみ)。</p>
         </details>
       </div>
     </section>

@@ -31,6 +31,7 @@ class SettingRequest extends FormRequest
             'copyright' => ['nullable', 'string', 'max:255'],
             'cancel_deadline' => ['nullable', 'string', 'max:255'],
             'cancel_policy' => ['nullable', 'string', 'max:2000'],
+            'contact_mail_to' => ['nullable', 'email', 'max:255'],
         ];
     }
 
@@ -45,6 +46,7 @@ class SettingRequest extends FormRequest
             'line_qr_image.max' => '画像は10MB以下にしてください',
             'line_url.url' => 'LINEのURLは「https://」から始まる形式で入力してください',
             'email.email' => 'メールアドレスはメール形式で入力してください',
+            'contact_mail_to.email' => 'お問い合わせの送信先はメール形式で入力してください',
             'uploaded' => '画像のアップロードに失敗しました。ファイルサイズを確認してください',
         ];
     }
@@ -64,6 +66,7 @@ class SettingRequest extends FormRequest
             'copyright' => '著作権',
             'cancel_deadline' => '解約の申し出期限',
             'cancel_policy' => 'キャンセルと返金',
+            'contact_mail_to' => 'お問い合わせの送信先',
         ];
     }
 }

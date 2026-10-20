@@ -104,7 +104,7 @@
       </div>
 
       <div class="form__group">
-        <p class="form__label">月額5,500円(保守プラン)のお支払い方法<span class="form__required">必須</span></p>
+        <p class="form__label">月額5,000円(税込・保守プラン)のお支払い方法<span class="form__required">必須</span></p>
         <div class="form__choices">
           @foreach (config('site.monthly_payments') as $value => $label)
           <label class="form__choice">
@@ -120,13 +120,59 @@
       </div>
 
       <div class="form__group">
-        <p class="form__label">下記「個人情報の取扱い」に同意する<span class="form__required">必須</span></p>
+        <p class="form__label">「個人情報の取扱い」への同意<span class="form__required">必須</span></p>
+        <p class="form__help">下の枠内を最後までお読みのうえ、「同意する」にチェックを入れてください。</p>
+        <div class="privacy" id="privacy" tabindex="0" role="region" aria-labelledby="privacy-title">
+          <h2 id="privacy-title">個人情報の取扱い</h2>
+          <p>BLUE TAB ホームページ制作(以下「当方」)は、お問い合わせフォームでお預かりする個人情報を、次のとおり取り扱います。</p>
+
+          <h3>1. 取得する情報</h3>
+          <ul>
+            <li>お名前、メールアドレス、電話番号</li>
+            <li>お住まい(地域)</li>
+            <li>ご年齢(任意)</li>
+            <li>ご相談内容(Laravel(PHP)の選択など)</li>
+            <li>お支払い方法の選択。カード番号などは取得しません</li>
+          </ul>
+
+          <h3>2. 利用目的</h3>
+          <ul>
+            <li>お問い合わせへの回答と、ご連絡のため</li>
+            <li>ご相談やお見積りなど、ご依頼の対応のため</li>
+            <li>個人を特定しない形での、問い合わせ傾向の把握のため</li>
+          </ul>
+          <p>上記以外の目的には使いません。</p>
+
+          <h3>3. 第三者への提供</h3>
+          <p>法令に基づく場合を除き、ご本人の同意なく、第三者に個人情報を提供しません。</p>
+
+          <h3>4. 外部サービスの利用</h3>
+          <p>フォームの運用などで外部のサービスを使う場合は、必要な範囲に限って情報を預け、適切に管理します。</p>
+
+          <h3>5. 安全管理</h3>
+          <p>個人情報の漏えい、紛失、改ざんを防ぐため、適切な安全管理を行います。</p>
+
+          <h3>6. 保管期間</h3>
+          <p>ご対応が終わってから1年を目安に保管し、その後は削除します。</p>
+
+          <h3>7. 開示・訂正・削除のご請求</h3>
+          <p>ご本人から、お預かりした個人情報の開示、訂正、削除のご請求があった場合は、本人であることを確認したうえで、速やかに対応します。ご連絡は、LINEからお願いします。</p>
+
+          <h3>8. ご入力いただけない場合</h3>
+          <p>必須の項目をご入力いただけない場合は、お問い合わせにお答えできないことがあります。ご年齢は任意で、入力しなくても問題ありません。</p>
+
+          <h3>9. 内容の変更</h3>
+          <p>この「個人情報の取扱い」は、必要に応じて見直し、変更することがあります。変更後の内容は、このページに掲載します。</p>
+
+          <p class="privacy__date">制定日:2026年10月6日</p>
+        </div>
+        <p class="form__help privacy__status" id="privacy-status" aria-live="polite"></p>
         <div class="form__agree">
           <label class="form__agree-check">
-            <input type="checkbox" id="agree" name="agree" value="1" {{ old('agree') ? 'checked' : '' }} />
+            <input type="checkbox" id="agree" name="agree" value="1" aria-describedby="privacy-status" {{ old('agree') ? 'checked' : '' }} />
             同意する
           </label>
-          <p class="form__help">内容は、このページの下にある<a class="text-link" href="#privacy">「個人情報の取扱い」</a>をお読みください。事業者情報やキャンセルについては<a class="text-link" href="{{ route('tokushoho') }}">こちら</a>です。</p>
+          <p class="form__help">事業者情報やキャンセルについては<a class="text-link" href="{{ route('tokushoho') }}">こちら</a>です。</p>
         </div>
         @error('agree')
         <p class="form__error">{{ $message }}</p>
@@ -137,52 +183,7 @@
       <p class="form__help">「同意する」にチェックを入れると、送信できます。</p>
     </form>
 
-    <section class="privacy" id="privacy">
-      <h2>個人情報の取扱い</h2>
-      <p>BLUE TAB ホームページ制作(以下「当方」)は、お問い合わせフォームでお預かりする個人情報を、次のとおり取り扱います。</p>
-
-      <h3>1. 取得する情報</h3>
-      <ul>
-        <li>お名前、メールアドレス、電話番号</li>
-        <li>お住まい(地域)</li>
-        <li>ご年齢(任意)</li>
-        <li>ご相談内容(Laravel(PHP)の選択など)</li>
-        <li>お支払い方法の選択。カード番号などは取得しません</li>
-      </ul>
-
-      <h3>2. 利用目的</h3>
-      <ul>
-        <li>お問い合わせへの回答と、ご連絡のため</li>
-        <li>ご相談やお見積りなど、ご依頼の対応のため</li>
-        <li>個人を特定しない形での、問い合わせ傾向の把握のため</li>
-      </ul>
-      <p>上記以外の目的には使いません。</p>
-
-      <h3>3. 第三者への提供</h3>
-      <p>法令に基づく場合を除き、ご本人の同意なく、第三者に個人情報を提供しません。</p>
-
-      <h3>4. 外部サービスの利用</h3>
-      <p>フォームの運用などで外部のサービスを使う場合は、必要な範囲に限って情報を預け、適切に管理します。</p>
-
-      <h3>5. 安全管理</h3>
-      <p>個人情報の漏えい、紛失、改ざんを防ぐため、適切な安全管理を行います。</p>
-
-      <h3>6. 保管期間</h3>
-      <p>ご対応が終わってから1年を目安に保管し、その後は削除します。</p>
-
-      <h3>7. 開示・訂正・削除のご請求</h3>
-      <p>ご本人から、お預かりした個人情報の開示、訂正、削除のご請求があった場合は、本人であることを確認したうえで、速やかに対応します。ご連絡は、LINEからお願いします。</p>
-
-      <h3>8. ご入力いただけない場合</h3>
-      <p>必須の項目をご入力いただけない場合は、お問い合わせにお答えできないことがあります。ご年齢は任意で、入力しなくても問題ありません。</p>
-
-      <h3>9. 内容の変更</h3>
-      <p>この「個人情報の取扱い」は、必要に応じて見直し、変更することがあります。変更後の内容は、このページに掲載します。</p>
-
-      <p class="privacy__date">制定日:2026年10月6日</p>
-    </section>
-
-    <a class="button button--outline" href="{{ route('home') }}">トップページへ戻る</a>
+    <a class="button button--outline contact__back" href="{{ route('home') }}">トップページへ戻る</a>
   </main>
 </div>
 
@@ -190,11 +191,37 @@
   (function () {
     var agree = document.getElementById('agree');
     var submit = document.getElementById('submit');
-    var toggle = function () {
+    var privacy = document.getElementById('privacy');
+    var status = document.getElementById('privacy-status');
+
+    var toggleSubmit = function () {
       submit.disabled = !agree.checked;
     };
-    agree.addEventListener('change', toggle);
-    toggle();
+
+    // 「個人情報の取扱い」を最後までスクロールしたら、同意チェックを押せるようにする
+    var unlock = function () {
+      agree.disabled = false;
+      status.textContent = '最後までお読みいただきました。「同意する」にチェックを入れてください。';
+      privacy.removeEventListener('scroll', onScroll);
+    };
+    var isRead = function () {
+      return privacy.scrollTop + privacy.clientHeight >= privacy.scrollHeight - 4;
+    };
+    var onScroll = function () {
+      if (isRead()) unlock();
+    };
+
+    // 入力エラーで戻ってきたときなど、既にチェック済みなら読了扱い
+    if (agree.checked || isRead()) {
+      unlock();
+    } else {
+      agree.disabled = true;
+      status.textContent = '最後までスクロールすると、チェックできます。';
+      privacy.addEventListener('scroll', onScroll);
+    }
+
+    agree.addEventListener('change', toggleSubmit);
+    toggleSubmit();
   })();
 </script>
 @endsection

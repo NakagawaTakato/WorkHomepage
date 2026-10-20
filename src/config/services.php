@@ -24,6 +24,12 @@ return [
         'token' => env('POSTMARK_TOKEN'),
     ],
 
+    // Outlook(Microsoft Graph API)でメールを送るための、Microsoft Entra のアプリ登録情報
+    'microsoft' => [
+        'client_id' => env('MICROSOFT_CLIENT_ID'),
+        'tenant' => env('MICROSOFT_TENANT', 'consumers'),
+    ],
+
     'ses' => [
         'key' => env('AWS_ACCESS_KEY_ID'),
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
