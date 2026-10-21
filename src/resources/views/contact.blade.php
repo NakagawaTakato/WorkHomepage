@@ -172,6 +172,8 @@
             <input type="checkbox" id="agree" name="agree" value="1" aria-describedby="privacy-status" {{ old('agree') ? 'checked' : '' }} />
             同意する
           </label>
+          <p class="form__help">現在、日本国内にお住まいで、日本語でやり取りができる方からのご依頼をお受けしています。</p>
+          <p class="form__help">反社会的勢力に当てはまる方や、法令・公序良俗に反するご依頼は、お受けしていません。</p>
           <p class="form__help">事業者情報やキャンセルについては<a class="text-link" href="{{ route('tokushoho') }}">こちら</a>です。</p>
         </div>
         @error('agree')
